@@ -1,0 +1,7 @@
+#Окно Terminal:
+mvn install
+docker build -t prod .
+docker build -t qa .
+docker run -e "SPRING_PROFILES_ACTIVE=prod" -p 80:8080 --name prod prod
+#Новая сессия Terminal:
+docker run -e "SPRING_PROFILES_ACTIVE=qa" -p 8080:8080 --name qa qa
