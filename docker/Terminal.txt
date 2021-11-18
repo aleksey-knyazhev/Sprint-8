@@ -1,4 +1,5 @@
 #Окно Terminal:
+cd .\docker
 mvn install
 docker build -t prod .
 docker build -t qa .
